@@ -1,12 +1,18 @@
 import React from 'react';
 import 'normalize.css';
+import { BrowserRouter as Router , Routes, Route } from 'react-router-dom';
+import { Landing, ErrorPage, Register, Dashboard } from "./pages"
+import "./app.css"
 
 const App:React.FC = () => {
   return (
-    <div className="App">
-      <h2>First text</h2>
-    </div>
-  );
+    <Router>
+      <Routes>
+        <Route path='/' element={<Dashboard/>} />
+        <Route path='/landing' element={<Landing/>} />
+      </Routes>
+    </Router>
+  )
 }
 
 export default App;

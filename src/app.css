@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');
+
+body{
+  font-family: 'Cabin', sans-serif;
+  /* background-color: var(--primary-black); */
+  overflow: hidden;
+}
+
+
+:root{
+    --primary-red1: #FF4301;
+    --secondary-red2:#FF4301;
+    --primary-black: #020202;
+    --primary-white: #DCDCDC;
+    --primary-green: #95FF00;
+    --primary-blue: #1171f0;
+  }
+  
