@@ -13,7 +13,7 @@ const Login: React.FC<props> = ({ toggle }) => {
         toggle ? "right-0" : "right-[-50%]"
       } z-10 `}
     >
-      <div className="h-[90%] m-8 p-4 flex flex-col justify-around">
+      <div className="h-[90%] m-2 md:m-4 xl:m-8 xl:p-4 flex flex-col justify-around">
         <h2 className="font-extrabold text-3xl mx-2 text-[--primary-blue] tracking-widest cursor-pointer text-center">
           Yummy Slice Pizza
         </h2>
@@ -23,7 +23,7 @@ const Login: React.FC<props> = ({ toggle }) => {
         </p>
 
         {/* services */}
-        <div className="flex justify-around">
+        <div className=" lg:flex justify-around">
           <div className="flex items-center gap-2 ">
             <GiFullPizza className="text-[--primary-blue-2] text-2xl" />
             <p className=" text-lg text-gray-700">Great Food</p>
@@ -35,11 +35,11 @@ const Login: React.FC<props> = ({ toggle }) => {
         </div>
 
         {/* Information */}
-        <div className="h-[30%] p-3 bg-white  shadow-lg rounded-md">
+        <div className="h-[30%] p-2 lg:p-3 bg-white  shadow-lg rounded-md flex flex-col justify-center">
           <p className="text-gray-800 pt-2 text-xs font-semibold  tracking-wider">
             Login with your valid mobile number
           </p>
-          <h2 className="inline-block bg-white relative z-10 top-[14px] left-12 text-gray-600 px-1 text-xs tracking-wider">
+          <h2 className="hidden lg:block inline-block bg-white relative z-10 top-[14px] left-12 text-gray-600 px-1 text-xs tracking-wider">
             Mobile Number
           </h2>
           <div className="flex pt-2">
@@ -53,7 +53,7 @@ const Login: React.FC<props> = ({ toggle }) => {
           </div>
           <div className="flex justify-end pt-2">
             <button
-              className="bg-gray-400 py-2 rounded-md  px-6 text-xs tracking-wider text-white font-semibold"
+              className="bg-gray-400 py-1 lg:py-2 rounded-md  px-6 text-xs tracking-wider text-white font-semibold"
               type="submit"
             >
               SUBMIT
@@ -62,19 +62,19 @@ const Login: React.FC<props> = ({ toggle }) => {
         </div>
 
         {/* Social links */}
-        <div className="bg-white pb-2  shadow-lg rounded-md">
+        <div className="bg-white pb-2  shadow-lg rounded-md flex flex-col justify-center">
           <p className="text-gray-700 p-3 text-xs font-semibold tracking-wider">
             Login with social accounts
           </p>
           <div>
-            <div className=" flex justify-evenly ">
-              <div className="w-[45%] rounded-lg cursor-pointer py-2 px-3 flex justify-center items-center bg-blue-800 text-white">
-                <FaFacebookF className="" />
-                <h2 className="mx-1 text-sm">FACEBOOK</h2>
+            <div className=" flex max-md:flex-col max-md:items-center gap-2 md:justify-evenly ">
+              <div className="w-[45%] rounded-lg cursor-pointer py-1 px-2 md:py-2 md:px-3 flex justify-center items-center bg-blue-800 text-white">
+                <FaFacebookF className="hidden lg:block " />
+                <h2 className="mx-1 text-xs md:text-sm">FACEBOOK</h2>
               </div>
-              <div className="w-[45%] rounded-md cursor-pointer py-2 px-3 flex justify-center items-center bg-red-500 text-white">
-                <AiOutlineGoogle className="text-xl " />
-                <h2 className="mx-1 text-sm">GOOGLE</h2>
+              <div className="w-[45%] rounded-md cursor-pointer py-1 px-2 md:py-2 md:px-3 flex justify-center items-center bg-red-500 text-white">
+                <AiOutlineGoogle className="hidden lg:block text-xl " />
+                <h2 className="md:mx-1 text-xs md:text-sm">GOOGLE</h2>
               </div>
             </div>
           </div>
