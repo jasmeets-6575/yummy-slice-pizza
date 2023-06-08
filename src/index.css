@@ -2,9 +2,3 @@
 @tailwind components;
 @tailwind utilities;
 
-@media screen and (max-width: 992px) {
-  .app {
-    overflow: scroll;
-    max-height: 100vh !important;
-  }
-}

@@ -5,7 +5,7 @@ import NavbarMain from "../components/NavbarMain";
 
 const Landing = () => {
   return (
-    <div className="overflow-auto h-[100vh] ">
+    <div className=" ">
       <NavbarMain />
       <LandingMain />
       <Details />

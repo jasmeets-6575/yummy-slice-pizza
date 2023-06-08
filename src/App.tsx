@@ -10,6 +10,7 @@ const App:React.FC = () => {
       <Routes>
         <Route path='/' element={<Dashboard/>} />
         <Route path='/landing' element={<Landing/>} />
+        <Route path="*" element={<ErrorPage />} />
       </Routes>
     </Router>
   )
