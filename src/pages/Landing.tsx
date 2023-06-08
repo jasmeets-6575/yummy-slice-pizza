@@ -1,3 +1,4 @@
+import Details from "../components/Details";
 import Footer from "../components/Footer";
 import LandingMain from "../components/LandingMain";
 import NavbarMain from "../components/NavbarMain";
@@ -7,6 +8,7 @@ const Landing = () => {
     <div className="overflow-auto h-[100vh] ">
       <NavbarMain />
       <LandingMain />
+      <Details />
       <Footer />
     </div>
   );
