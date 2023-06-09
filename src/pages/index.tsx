@@ -1,4 +1,4 @@
-import Dashboard from "./Dashboard";
+import Dashboard from "./Dashboard/Dashboard";
 import ErrorPage from "./Error";
 import Landing from "./Landing";
 

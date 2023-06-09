@@ -1,6 +1,7 @@
 import { MdOutlineLocationOn } from "react-icons/md";
 import { BiCurrentLocation } from "react-icons/bi";
 import discount from "../assets/discount.jpg";
+import Delivery from "./Delivery";
 
 const Details = () => {
   return (
@@ -16,20 +17,7 @@ const Details = () => {
           Please select location, so that we can find a restaurant that delivers
           to you!
         </p>
-        <div className="w-[60%] lg:w-[50%] text-[1rem] py-2 flex justify-around mx-auto text-[--primary-blue-2]">
-          <div>
-            <input type="radio" name="A" id="" checked />
-            <label className="mx-2" htmlFor="">
-              Delivery
-            </label>
-          </div>
-          <div>
-            <input type="radio" name="A" id="" />
-            <label className="mx-2" htmlFor="">
-              Pick Up / Dine-in
-            </label>
-          </div>
-        </div>
+        <Delivery />
         <div className=" w-[60%] md:w-[75%] flex justify-between border border-[--primary-blue-2] rounded-md bg-white items-center mx-auto ">
           <MdOutlineLocationOn className="text-3xl text-[--primary-blue-2]  " />
           <input
