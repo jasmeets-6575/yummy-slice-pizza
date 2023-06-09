@@ -1,8 +1,53 @@
+import { IoMdLocate } from "react-icons/io";
+import AddressList from "../../assets/address-list.png";
+
 const RightSidebar = () => {
   return (
-    <div className="fixed z-10 w-[20%] bg-gray-100 h-[90vh]">
-      <div className="">
+    <div className="fixed right-0 z-10 w-[30%] bg-white h-[90vh]">
+      <div className="h-[90%] flex flex-col items-center justify-around  m-6">
+        <div className="h-auto w-full flex flex-col gap-3 justify-center items-start ">
+          <h2 className="text-3xl tracking-widest">Order Online</h2>
+          <div className="text-md py-2 flex justify-around items-center gap-8 text-[--primary-blue-2] text-sm">
+            <div className="flex justify-center items-center ">
+              <input type="radio" name="A" id="" checked />
+              <label className="mx-2" htmlFor="">
+                Delivery
+              </label>
+            </div>
+            <div className="flex justify-center items-center ">
+              <input type="radio" name="A" id="" />
+              <label className="mx-2" htmlFor="">
+                Dine-In
+              </label>
+            </div>
+          </div>
+          <h2 className="text-gray-600">We will deliver right to your door</h2>
+        </div>
 
+        {/* inputs  */}
+        <div className="w-full border-none shadow-md shadow-sky-200 rounded-lg flex justify-center items-center p-1 ">
+          <div className="w-[95%] h-[90%] flex">
+            <input
+              className="w-[65%] px-2 py-1 rounded-lg border-none"
+              type="text"
+              placeholder="Enter Area / Locality"
+            />
+            <div className="text-white rounded-lg bg-green-600 w-[35%] py-2 px-1 flex justify-center items-center gap-1">
+              <IoMdLocate className="text-xl" />
+              <button className="tracking-wider " type="submit">
+                Locate Me
+              </button>
+            </div>
+          </div>
+        </div>
+
+        {/* My address*/}
+        <img className="" src={AddressList} alt="" />
+        <button className="text-green-600 text-xl border-2 px-1 border-green-600 tracking-widest">MY ADDRESS</button>
+        <p className="w-[70%] text-center text-[--primary-blue] text-sm">
+          Please select location, so that we can find a restaurant that delivers
+          to you!
+        </p>
       </div>
     </div>
   );
