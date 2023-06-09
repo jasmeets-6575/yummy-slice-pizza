@@ -21,18 +21,18 @@ const RightSidebar = () => {
               </label>
             </div>
           </div>
-          <h2 className="text-gray-600">We will deliver right to your door</h2>
+          <h2 className="text-gray-600 tracking-wide">We will deliver right to your door</h2>
         </div>
 
         {/* inputs  */}
-        <div className="w-full border-none shadow-md shadow-sky-200 rounded-lg flex justify-center items-center p-1 ">
+        <div className="w-full border-none shadow-md shadow-sky-200 rounded-md flex justify-center items-center p-1 ">
           <div className="w-[95%] h-[90%] flex">
             <input
               className="w-[65%] px-2 py-1 rounded-lg border-none"
               type="text"
               placeholder="Enter Area / Locality"
             />
-            <div className="text-white rounded-lg bg-green-600 w-[35%] py-2 px-1 flex justify-center items-center gap-1">
+            <div className="text-white rounded-md bg-green-600 w-[35%] py-2 px-1 flex justify-center items-center gap-1">
               <IoMdLocate className="text-xl" />
               <button className="tracking-wider " type="submit">
                 Locate Me
@@ -42,8 +42,8 @@ const RightSidebar = () => {
         </div>
 
         {/* My address*/}
-        <img className="" src={AddressList} alt="" />
-        <button className="text-green-600 text-xl border-2 px-1 border-green-600 tracking-widest">MY ADDRESS</button>
+        <img className="w-[50%]" src={AddressList} alt="" />
+        <button className="text-green-600 text-md font-bold border-2 px-2 py-1 border-green-600 tracking-widest">MY ADDRESS</button>
         <p className="w-[70%] text-center text-[--primary-blue] text-sm">
           Please select location, so that we can find a restaurant that delivers
           to you!
