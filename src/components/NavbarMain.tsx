@@ -1,12 +1,11 @@
 import { BiUserCircle } from "react-icons/bi";
 import Logo from "./Logo";
-import {toggleSidebar} from "../features/toggleSidebar/toggleSidebar";
+import { toggleSidebar } from "../features/toggleSidebar/toggleSidebar";
 import { useAppDispatch } from "../store/store";
 
-
 const NavbarMain: React.FC = () => {
-  const dispatch = useAppDispatch()
-  
+  const dispatch = useAppDispatch();
+
   return (
     <div className="h-auto py-3 w-full flex bg-[--primary-blue]">
       <div className="w-[1240px] mx-auto flex justify-between ">

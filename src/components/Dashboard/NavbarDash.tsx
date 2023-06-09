@@ -1,17 +1,22 @@
 import { BiUserCircle } from "react-icons/bi";
 import { FaBars } from "react-icons/fa";
 import Logo from "../Logo";
-import Delivery from "../Delivery";
+import { useAppDispatch } from "../../store/store";
+import { toggleSidebar } from "../../features/toggleSidebar/toggleSidebar";
 
 const NavbarDash = () => {
+  const dispatch = useAppDispatch();
   return (
     <div className="h-auto py-3 w-full flex bg-[--primary-blue]">
       <div className="w-[95vw] mx-auto flex justify-between ">
         <div className="flex justify-around items-center gap-7">
-          <FaBars className="text-2xl text-white"/>
+          <FaBars
+            onClick={() => dispatch(toggleSidebar())}
+            className="text-2xl text-white cursor-pointer hover:text-3xl"
+          />
           <Logo />
         </div>
-        <div className="w-[30%]  border-l border-white flex justify-center ">
+        <div className="w-[30%] border-l border-white flex justify-center ">
           <div className="w-[90%] lg:w-[50%] text-[1rem] py-2 flex justify-around mx-auto text-white">
             <div className="flex justify-center items-center ">
               <input type="radio" name="A" id="" checked />

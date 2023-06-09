@@ -5,15 +5,15 @@ import { AiOutlineGoogle } from "react-icons/ai";
 import { useAppSelector } from "../store/store";
 
 const Login: React.FC = () => {
-  const {isSidebarOpen} = useAppSelector(store => store.toggle)
+  const { isSidebarOpen } = useAppSelector((store) => store.toggle);
   return (
     <div
       className={` duration-500 w-[30%] h-[90vh] bg-gray-100 fixed ${
-        isSidebarOpen ? "right-0" : "right-[-50%]"
+        isSidebarOpen ? "right-0" : "right-[-30%]"
       } z-10 `}
     >
       <div className="h-[90%] m-2 md:m-4 xl:m-8 xl:p-4 flex flex-col justify-around">
-        <h2 className="font-extrabold text-2xl lg:text-3xl mx-2 text-[--primary-blue] tracking-widest cursor-pointer text-center">
+        <h2 className="w-auto font-extrabold text-2xl lg:text-3xl mx-2 text-[--primary-blue]  tracking-widest cursor-pointer text-center">
           Yummy Slice Pizza
         </h2>
         <p className="text-gray-800 text-center text-lg">
