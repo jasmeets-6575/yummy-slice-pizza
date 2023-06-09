@@ -1,9 +1,15 @@
 import { IoMdLocate } from "react-icons/io";
 import AddressList from "../../assets/address-list.png";
+import { useAppSelector } from "../../store/store";
 
 const RightSidebar = () => {
+  const { isRightSidebarOpen } = useAppSelector((store) => store.toggle);
   return (
-    <div className="fixed right-[100%] z-10 w-[30%] bg-white h-[90vh]">
+    <div
+      className={` duration-500 fixed ${
+        isRightSidebarOpen ? "right-0" : "right-[-30%]"
+      } z-10 w-[30%] bg-white h-[90vh]`}
+    >
       <div className="h-[90%] flex flex-col items-center justify-around  m-6">
         <div className="h-auto w-full flex flex-col gap-3 justify-center items-start ">
           <h2 className="text-3xl tracking-widest">Order Online</h2>
@@ -21,7 +27,9 @@ const RightSidebar = () => {
               </label>
             </div>
           </div>
-          <h2 className="text-gray-600 tracking-wide">We will deliver right to your door</h2>
+          <h2 className="text-gray-600 tracking-wide">
+            We will deliver right to your door
+          </h2>
         </div>
 
         {/* inputs  */}
@@ -43,7 +51,9 @@ const RightSidebar = () => {
 
         {/* My address*/}
         <img className="w-[50%]" src={AddressList} alt="" />
-        <button className="text-green-600 text-md font-bold border-2 px-2 py-1 border-green-600 tracking-widest">MY ADDRESS</button>
+        <button className="text-green-600 text-md font-bold border-2 px-2 py-1 border-green-600 tracking-widest">
+          MY ADDRESS
+        </button>
         <p className="w-[70%] text-center text-[--primary-blue] text-sm">
           Please select location, so that we can find a restaurant that delivers
           to you!

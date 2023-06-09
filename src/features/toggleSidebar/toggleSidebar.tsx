@@ -1,11 +1,13 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 interface stateProps {
-    isSidebarOpen: boolean
+  isSidebarOpen: boolean;
+  isRightSidebarOpen: boolean;
 }
 
-const initialState:stateProps = {
+const initialState: stateProps = {
   isSidebarOpen: false,
+  isRightSidebarOpen: false,
 };
 
 const toggleSidebarSlice = createSlice({
@@ -15,8 +17,11 @@ const toggleSidebarSlice = createSlice({
     toggleSidebar: (state) => {
       state.isSidebarOpen = !state.isSidebarOpen;
     },
+    toggleRightSidebar: (state) => {
+      state.isRightSidebarOpen = !state.isRightSidebarOpen;
+    },
   },
 });
 
-export default toggleSidebarSlice.reducer ;
-export const {toggleSidebar} = toggleSidebarSlice.actions
+export default toggleSidebarSlice.reducer;
+export const { toggleSidebar, toggleRightSidebar } = toggleSidebarSlice.actions;

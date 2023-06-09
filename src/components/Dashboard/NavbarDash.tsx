@@ -2,7 +2,10 @@ import { BiUserCircle } from "react-icons/bi";
 import { FaBars } from "react-icons/fa";
 import Logo from "../Logo";
 import { useAppDispatch } from "../../store/store";
-import { toggleSidebar } from "../../features/toggleSidebar/toggleSidebar";
+import {
+  toggleSidebar,
+  toggleRightSidebar,
+} from "../../features/toggleSidebar/toggleSidebar";
 
 const NavbarDash = () => {
   const dispatch = useAppDispatch();
@@ -17,20 +20,18 @@ const NavbarDash = () => {
           <Logo />
         </div>
         <div className="w-[30%] border-l border-white flex justify-center ">
-          <div className="w-[90%] lg:w-[50%] text-[1rem] py-2 flex justify-around mx-auto text-white">
-            <div className="flex justify-center items-center ">
-              <input type="radio" name="A" id="" checked />
-              <label className="mx-2" htmlFor="">
-                Delivery
-              </label>
+          <div
+            className="w-[90%] lg:w-[50%] text-[1rem] py-2 flex justify-around mx-auto text-white "
+            onClick={() => dispatch(toggleRightSidebar())}
+          >
+            <div className="flex justify-center items-center cursor-pointer ">
+              <h2 className="mx-1 cursor-pointer">Delivery</h2>
             </div>
-            <div className="flex justify-center items-center ">
-              <input type="radio" name="A" id="" />
-              <label className="mx-2" htmlFor="">
-                Dine-In
-              </label>
+            <div className="flex justify-center items-center cursor-pointer">
+              <h2 className="mx-1 cursor-pointer">Dine-In</h2>
             </div>
           </div>
+
           <div className=" flex justify-end items-center mx-2 border-secondary-500 cursor-pointer">
             <BiUserCircle className=" text-3xl md:text-4xl text-white" />
             <div className=" text-white ml-2 text-xs md:text-sm ">
