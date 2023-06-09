@@ -18,8 +18,8 @@ const Login: React.FC<props> = ({ toggle }) => {
           Yummy Slice Pizza
         </h2>
         <p className="text-gray-800 text-center text-lg">
-          <span className="font-semibold tracking-wider">Login</span> to unlock awesome new
-          features
+          <span className="font-semibold tracking-wider">Login</span> to unlock
+          awesome new features
         </p>
 
         {/* services */}
@@ -47,7 +47,7 @@ const Login: React.FC<props> = ({ toggle }) => {
               +91
             </h2>
             <input
-              className="w-[90%]  pt-1 px-3 border border-gray-300 placeholder:text-xs"
+              className="w-[90%]  pt-1 px-3 border-t border-r border-b border-gray-300 placeholder:text-xs"
               type="text"
             />
           </div>
@@ -59,6 +59,10 @@ const Login: React.FC<props> = ({ toggle }) => {
               SUBMIT
             </button>
           </div>
+        </div>
+
+        <div className="flex justify-center">
+          <h2 className="text-[--primary-blue-2] tracking-widest">OR</h2>
         </div>
 
         {/* Social links */}
