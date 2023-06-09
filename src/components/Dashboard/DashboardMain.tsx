@@ -1,6 +1,6 @@
 const DashboardMain = () => {
   return (
-    <div className="h-screen bg-blue-400">
+    <div className="h-screen bg-white">
         DashboardMain
         </div>
   )

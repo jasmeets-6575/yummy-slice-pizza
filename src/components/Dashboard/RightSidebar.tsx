@@ -3,7 +3,7 @@ import AddressList from "../../assets/address-list.png";
 
 const RightSidebar = () => {
   return (
-    <div className="fixed right-0 z-10 w-[30%] bg-white h-[90vh]">
+    <div className="fixed right-[100%] z-10 w-[30%] bg-white h-[90vh]">
       <div className="h-[90%] flex flex-col items-center justify-around  m-6">
         <div className="h-auto w-full flex flex-col gap-3 justify-center items-start ">
           <h2 className="text-3xl tracking-widest">Order Online</h2>
@@ -28,7 +28,7 @@ const RightSidebar = () => {
         <div className="w-full border-none shadow-md shadow-sky-200 rounded-md flex justify-center items-center p-1 ">
           <div className="w-[95%] h-[90%] flex">
             <input
-              className="w-[65%] px-2 py-1 rounded-lg border-none"
+              className="w-[65%] outline-none px-2 py-1 rounded-lg border-none"
               type="text"
               placeholder="Enter Area / Locality"
             />

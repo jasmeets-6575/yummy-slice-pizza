@@ -1,7 +1,7 @@
 import { BiUserCircle } from "react-icons/bi";
 import { FaBars } from "react-icons/fa";
-import Logo from "../../components/Logo";
-import Delivery from "../../components/Delivery";
+import Logo from "../Logo";
+import Delivery from "../Delivery";
 
 const NavbarDash = () => {
   return (

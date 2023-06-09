@@ -1,7 +1,7 @@
 const ItemLinks = () => {
   return (
-    <div className="bg-white shadow-lg h-auto flex justify-center items-center">
-        <div className="w-[95vw] p-1 text-gray-400 hover:text-blue-700 text-sm tracking-widest flex justify-around items-center ">
+    <div className="bg-white h-auto flex justify-center items-center">
+        <div className="w-[95vw] p-1 text-gray-400 text-sm tracking-widest flex justify-around items-center ">
           <h2>BEST SELLERS</h2>
           <h2>PIZZA MANIA</h2>
           <h2>DOUBLE TOPPINGS</h2>
