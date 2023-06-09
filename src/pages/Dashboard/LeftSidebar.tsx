@@ -10,7 +10,7 @@ interface props {
 const LeftSidebar = () => {
     
   return (
-    <div className="fixed left-[100%] flex flex-col gap-2 w-[20%] bg-white h-[90vh]">
+    <div className="fixed z-10 left-[100%] bg-gray-100 flex flex-col gap-2 w-[20%] h-[90vh]">
       {data.map((item) => {
         const { id, text, logo } = item;        
         return (
