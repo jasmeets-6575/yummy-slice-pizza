@@ -6,6 +6,9 @@ import {
   toggleSidebar,
   toggleRightSidebar,
   toggleLoginSidebar,
+  closeSidebar,
+  closeRightSidebar,
+  closeLoginSidebar,
 } from "../../features/toggleSidebar/toggleSidebar";
 
 const NavbarDash = () => {
@@ -15,7 +18,11 @@ const NavbarDash = () => {
       <div className="w-[95vw] mx-auto flex justify-between ">
         <div className="flex justify-around items-center gap-7">
           <FaBars
-            onClick={() => dispatch(toggleSidebar())}
+            onClick={() => {
+              dispatch(closeRightSidebar());
+              dispatch(closeLoginSidebar());
+              dispatch(toggleSidebar());
+            }}
             className="text-2xl text-white cursor-pointer hover:text-3xl"
           />
           <Logo />
@@ -23,7 +30,11 @@ const NavbarDash = () => {
         <div className="w-[30%] border-l border-white flex justify-center ">
           <div
             className="w-[90%] lg:w-[50%] text-[1rem] py-2 flex justify-around mx-auto text-white "
-            onClick={() => dispatch(toggleRightSidebar())}
+            onClick={() => {
+              dispatch(closeSidebar());
+              dispatch(closeLoginSidebar());
+              dispatch(toggleRightSidebar());
+            }}
           >
             <div className="flex justify-center items-center cursor-pointer ">
               <h2 className="mx-1 cursor-pointer">Delivery</h2>
@@ -37,7 +48,11 @@ const NavbarDash = () => {
             <BiUserCircle className=" text-3xl md:text-4xl text-white" />
             <div
               className=" text-white ml-2 text-xs md:text-sm "
-              onClick={() => dispatch(toggleLoginSidebar())}
+              onClick={() => {
+                dispatch(closeRightSidebar());
+                dispatch(closeSidebar());
+                dispatch(toggleLoginSidebar());
+              }}
             >
               <h3>MY ACCOUNT</h3>
               <h3>Log In / Sign Up</h3>

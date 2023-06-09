@@ -25,8 +25,24 @@ const toggleSidebarSlice = createSlice({
     toggleLoginSidebar: (state) => {
       state.isLoginSidebarOpen = !state.isLoginSidebarOpen;
     },
+    closeSidebar: (state) => {
+      state.isSidebarOpen = false;
+    },
+    closeRightSidebar: (state) => {
+      state.isRightSidebarOpen = false;
+    },
+    closeLoginSidebar: (state) => {
+      state.isLoginSidebarOpen = false;
+    },
   },
 });
 
 export default toggleSidebarSlice.reducer;
-export const {toggleLoginSidebar, toggleSidebar, toggleRightSidebar } = toggleSidebarSlice.actions;
+export const {
+  toggleSidebar,
+  toggleRightSidebar,
+  toggleLoginSidebar,
+  closeSidebar,
+  closeRightSidebar,
+  closeLoginSidebar,
+} = toggleSidebarSlice.actions;
