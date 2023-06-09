@@ -5,6 +5,7 @@ import { useAppDispatch } from "../../store/store";
 import {
   toggleSidebar,
   toggleRightSidebar,
+  toggleLoginSidebar,
 } from "../../features/toggleSidebar/toggleSidebar";
 
 const NavbarDash = () => {
@@ -34,7 +35,10 @@ const NavbarDash = () => {
 
           <div className=" flex justify-end items-center mx-2 border-secondary-500 cursor-pointer">
             <BiUserCircle className=" text-3xl md:text-4xl text-white" />
-            <div className=" text-white ml-2 text-xs md:text-sm ">
+            <div
+              className=" text-white ml-2 text-xs md:text-sm "
+              onClick={() => dispatch(toggleLoginSidebar())}
+            >
               <h3>MY ACCOUNT</h3>
               <h3>Log In / Sign Up</h3>
             </div>

@@ -8,7 +8,7 @@ const RightSidebar = () => {
     <div
       className={` duration-500 fixed ${
         isRightSidebarOpen ? "right-0" : "right-[-30%]"
-      } z-10 w-[30%] bg-white h-[90vh]`}
+      } shadow-lg z-10 w-[30%] bg-white h-[90vh]`}
     >
       <div className="h-[90%] flex flex-col items-center justify-around  m-6">
         <div className="h-auto w-full flex flex-col gap-3 justify-center items-start ">

@@ -3,11 +3,13 @@ import { createSlice } from "@reduxjs/toolkit";
 interface stateProps {
   isSidebarOpen: boolean;
   isRightSidebarOpen: boolean;
+  isLoginSidebarOpen: boolean;
 }
 
 const initialState: stateProps = {
   isSidebarOpen: false,
   isRightSidebarOpen: false,
+  isLoginSidebarOpen: false,
 };
 
 const toggleSidebarSlice = createSlice({
@@ -20,8 +22,11 @@ const toggleSidebarSlice = createSlice({
     toggleRightSidebar: (state) => {
       state.isRightSidebarOpen = !state.isRightSidebarOpen;
     },
+    toggleLoginSidebar: (state) => {
+      state.isLoginSidebarOpen = !state.isLoginSidebarOpen;
+    },
   },
 });
 
 export default toggleSidebarSlice.reducer;
-export const { toggleSidebar, toggleRightSidebar } = toggleSidebarSlice.actions;
+export const {toggleLoginSidebar, toggleSidebar, toggleRightSidebar } = toggleSidebarSlice.actions;

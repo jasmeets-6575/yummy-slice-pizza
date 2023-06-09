@@ -1,6 +1,6 @@
 import { BiUserCircle } from "react-icons/bi";
 import Logo from "./Logo";
-import { toggleSidebar } from "../features/toggleSidebar/toggleSidebar";
+import { toggleLoginSidebar } from "../features/toggleSidebar/toggleSidebar";
 import { useAppDispatch } from "../store/store";
 
 const NavbarMain: React.FC = () => {
@@ -14,7 +14,7 @@ const NavbarMain: React.FC = () => {
           <BiUserCircle className=" text-3xl md:text-4xl text-white" />
           <div
             className=" text-white ml-2 text-xs md:text-sm "
-            onClick={() => dispatch(toggleSidebar())}
+            onClick={() => dispatch(toggleLoginSidebar())}
           >
             <h3>MY ACCOUNT</h3>
             <h3>Log In / Sign Up</h3>
