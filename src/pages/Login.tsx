@@ -14,23 +14,23 @@ const Login: React.FC<props> = ({ toggle }) => {
       } z-10 `}
     >
       <div className="h-[90%] m-2 md:m-4 xl:m-8 xl:p-4 flex flex-col justify-around">
-        <h2 className="font-extrabold text-3xl mx-2 text-[--primary-blue] tracking-widest cursor-pointer text-center">
+        <h2 className="font-extrabold text-2xl lg:text-3xl mx-2 text-[--primary-blue] tracking-widest cursor-pointer text-center">
           Yummy Slice Pizza
         </h2>
         <p className="text-gray-800 text-center text-lg">
-          <span className="font-semibold">Login</span> to unlock awesome new
+          <span className="font-semibold tracking-wider">Login</span> to unlock awesome new
           features
         </p>
 
         {/* services */}
         <div className=" lg:flex justify-around">
           <div className="flex items-center gap-2 ">
-            <GiFullPizza className="text-[--primary-blue-2] text-2xl" />
-            <p className=" text-lg text-gray-700">Great Food</p>
+            <GiFullPizza className="text-[--primary-blue-2] text-xl lg:text-2xl" />
+            <p className=" text-md lg:text-lg text-gray-700">Great Food</p>
           </div>
           <div className="flex items-center gap-2 ">
-            <BsPersonHeart className="text-[--primary-blue-2] text-2xl " />
-            <p className="text-lg text-gray-700">Great Service</p>
+            <BsPersonHeart className="text-[--primary-blue-2] text-xl lg:text-2xl " />
+            <p className="text-md lg:text-lg text-gray-700">Great Service</p>
           </div>
         </div>
 
@@ -39,7 +39,7 @@ const Login: React.FC<props> = ({ toggle }) => {
           <p className="text-gray-800 pt-2 text-xs font-semibold  tracking-wider">
             Login with your valid mobile number
           </p>
-          <h2 className="hidden lg:block inline-block bg-white relative z-10 top-[14px] left-12 text-gray-600 px-1 text-xs tracking-wider">
+          <h2 className="hidden lg:block lg:w-fit bg-white relative z-10 top-[14px] left-12 text-gray-600 px-1 text-xs tracking-wider">
             Mobile Number
           </h2>
           <div className="flex pt-2">
