@@ -2,13 +2,12 @@ import bag from "../../assets/bucket2.jpg";
 
 const Cart = () => {
   return (
-    <div className="border h-[21rem] rounded-lg bg-white">
+    <div className="border w-[270px] fixed top-[315px] shadow-xl h-[21rem] rounded-md bg-white">
       <img
         className="w-[80%] rounded-xl mx-auto object-cover"
         src={bag}
         alt="empty bag"
       />
-
       <h2 className="w-[90%] text-xl mx-auto text-gray-600 tracking-widest my-4 font-bold text-center ">
         YOUR CART IS EMPTY
       </h2>

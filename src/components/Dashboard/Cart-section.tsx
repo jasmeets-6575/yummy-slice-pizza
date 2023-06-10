@@ -3,9 +3,9 @@ import Cart from "./Cart";
 
 const CartSection = () => {
   return (
-    <div>
+    <div className="">
       <div className=" min-h-screen mx-4 flex flex-col gap-6">
-        <img className="rounded-lg" src={offer} alt="offer-coupon" />
+        <img className="rounded-md" src={offer} alt="offer-coupon" />
         <Cart />
       </div>
     </div>
