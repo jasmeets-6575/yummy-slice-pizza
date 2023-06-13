@@ -8,7 +8,7 @@ const Login: React.FC = () => {
   const { isLoginSidebarOpen } = useAppSelector((store) => store.toggle);
   return (
     <div
-      className={` duration-500 w-[30%] h-[90vh] bg-gray-100 fixed ${
+      className={` duration-500 w-[30%] h-[90vh] shadow-xl bg-gray-100 fixed ${
         isLoginSidebarOpen ? "right-0" : "right-[-30%]"
       } z-10 `}
     >

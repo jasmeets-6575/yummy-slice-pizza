@@ -11,7 +11,7 @@ const LeftSidebar = () => {
   const { isSidebarOpen } = useAppSelector((store) => store.toggle);
   return (
     <div
-      className={`duration-500 fixed z-10 ${
+      className={`duration-500 shadow-lg fixed z-10 ${
         isSidebarOpen ? "left-0" : "left-[-20%]"
       } bg-gray-100 flex flex-col gap-2 w-[20%] h-[90vh] `}
     >
