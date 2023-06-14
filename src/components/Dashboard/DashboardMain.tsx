@@ -4,11 +4,11 @@ import Main from "./Main";
 const DashboardMain = () => {
   return (
     <div className=" flex justify-center ">
-      <div className="min-h-screen w-full mx-16 my-8 border border-red-500 flex ">
-        <div className="w-[75%] border border-blue-500">
+      <div className="min-h-screen w-full mx-16 my-8 flex ">
+        <div className="w-[75%]">
           <Main />
         </div>
-        <div className="w-[25%] border border-yellow-500">
+        <div className="w-[25%]">
           <CartSection />
         </div>
       </div>
