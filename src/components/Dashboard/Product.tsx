@@ -17,11 +17,11 @@ const Product: React.FC = () => {
             <div className=" relative">
               <img className="rounded-t-md " src={image} alt="pizza" />
               <div className=" flex justify-between items-center">
-                <h2 className="text-white font-bold bg-blue-500 tracking-widest absolute bottom-1 ml-1 border-2 rounded-md px-1 border-white z-10">
+                <h2 className="text-white font-bold bg-blue-500 tracking-widest absolute bottom-1 ml-1 border-2 rounded-md px-1 border-white ">
                   Rs {price}
                 </h2>
-                <button className="text-gray-600 text-sm bg-white border border-white capitalize absolute right-1 bottom-1 px-1 rounded-md tracking-widest flex justify-center items-center">
-                  customize <BiRightArrowAlt className="text-lg" />
+                <button className="text-gray-600 text-xs bg-white border border-white capitalize absolute right-1 bottom-2 px-1 rounded-md tracking-widest flex justify-center items-center">
+                  CUSTOMISE <BiRightArrowAlt className="text-base" />
                 </button>
               </div>
             </div>
@@ -34,7 +34,7 @@ const Product: React.FC = () => {
               </p>
             </div>
             <div className="flex justify-end py-2 ">
-              <button className="text-green-600 capitalize text-sm border-2 px-2 py-1 rounded-md border-green-600 tracking-widest mr-2">
+              <button className="text-green-600 capitalize text-sm border-2 px-2 rounded-md border-green-600 tracking-widest mr-1">
                 Add To Cart
               </button>
             </div>

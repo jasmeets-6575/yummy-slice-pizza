@@ -2,16 +2,12 @@ import { IconType } from "react-icons/lib";
 import { data } from "../../utils/leftSidebarData";
 import { useAppSelector } from "../../store/store";
 
-interface props {
-  id?: number;
-  text?: string;
-  logo?: IconType;
-}
+
 const LeftSidebar = () => {
   const { isSidebarOpen } = useAppSelector((store) => store.toggle);
   return (
     <div
-      className={`duration-500 shadow-lg fixed z-10 ${
+      className={`duration-500 shadow-lg fixed z-40 ${
         isSidebarOpen ? "left-0" : "left-[-20%]"
       } bg-gray-100 flex flex-col gap-2 w-[20%] h-[90vh] `}
     >
