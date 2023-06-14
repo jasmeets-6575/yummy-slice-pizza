@@ -12,7 +12,7 @@ const Product: React.FC = () => {
       {pizzaData.map((item: dataType) => {
         const { name, price, description, image } = item;
         return (
-          <section className=" h-72  rounded-md shadow-md ">
+          <section className=" h-72  rounded-md shadow-md flex flex-col justify-between">
             <div className=" relative">
               <img className="rounded-t-md  " src={image} alt="pizza" />
               <h2 className="text-white text-lg font-bold bg-blue-500 tracking-widest absolute bottom-1 ml-1 border-2  rounded-md px-1 border-white z-10">
@@ -27,7 +27,7 @@ const Product: React.FC = () => {
                 {description}
               </p>
             </div>
-            <div className="flex justify-end  ">
+            <div className="flex justify-end py-2 ">
               <button className="text-green-600 capitalize text-md border-2 px-2 py-1 rounded-md border-green-600 tracking-wide mr-2">
                 Add To Cart
               </button>
