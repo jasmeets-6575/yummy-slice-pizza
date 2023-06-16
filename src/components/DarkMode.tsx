@@ -1,18 +1,27 @@
 import { BsFillMoonFill, BsFillSunFill } from "react-icons/bs";
-import { useAppSelector } from "../store/store";
+import { useAppDispatch, useAppSelector } from "../store/store";
+import { toggleDarkMode } from "../features/toggleSidebar/toggleSidebar";
 
 const DarkMode = () => {
   const { isDarkMode } = useAppSelector((store) => store.toggle);
+  const dispatch = useAppDispatch();
   return (
-    <div className="flex">
+    <div className="flex mx-3">
       <div className="text-white flex justify-center gap-[6px] items-center">
         {isDarkMode ? (
-          <BsFillSunFill className="text-2xl" />
-        ) : (
           <BsFillMoonFill className="text-xl" />
+        ) : (
+          <BsFillSunFill className="text-2xl" />
         )}
-        <div className="w-10 h-6 bg-white rounded-full flex items-center cursor-pointer" >
-          <div className="w-1/2 bg-[--primary-blue] h-[85%] ml-[2px] block rounded-full "></div>
+        <div
+          className={`w-10 h-6 bg-white rounded-full flex items-center relative cursor-pointer`}
+          onClick={() => dispatch(toggleDarkMode())}
+        >
+          <div
+            className={` w-1/2 h-5 absolute ${
+              isDarkMode ? "right-0" : "left-0"
+            } bg-[--primary-blue] mx-[2px] rounded-full `}
+          ></div>
         </div>
       </div>
     </div>

@@ -27,6 +27,9 @@ const toggleSidebarSlice = createSlice({
     toggleLoginSidebar: (state) => {
       state.isLoginSidebarOpen = !state.isLoginSidebarOpen;
     },
+    toggleDarkMode: (state) => {
+      state.isDarkMode = !state.isDarkMode;
+    },
     closeSidebar: (state) => {
       state.isSidebarOpen = false;
     },
@@ -36,9 +39,6 @@ const toggleSidebarSlice = createSlice({
     closeLoginSidebar: (state) => {
       state.isLoginSidebarOpen = false;
     },
-    toggleDarkMode: (state) => {
-      state.isDarkMode = !state.isDarkMode
-    }
   },
 });
 
@@ -47,6 +47,7 @@ export const {
   toggleSidebar,
   toggleRightSidebar,
   toggleLoginSidebar,
+  toggleDarkMode,
   closeSidebar,
   closeRightSidebar,
   closeLoginSidebar,
