@@ -1,9 +1,11 @@
 import { Link } from "react-router-dom";
 import Pizza from "../assets/pizza.jpg";
+import { useAppSelector } from "../store/store";
 
 const LandingMain = () => {
+  const { isDarkMode } = useAppSelector((store) => store.toggle);
   return (
-    <div className="w-full h-auto md:grid grid-cols-2  ">
+    <div className={`w-full h-auto md:grid grid-cols-2 ${isDarkMode ? "bg-gray-900 text-white":null} `}>
       <div className="info flex flex-col justify-center items-center">
         <div className="my-5">
           <span className=" lg:text-[7rem]  text-[--primary-blue-2] text-[6rem] font-bold ">
