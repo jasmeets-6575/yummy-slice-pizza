@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Pizza from "../assets/pizza.jpg";
 
 const LandingMain = () => {
@@ -16,9 +17,11 @@ const LandingMain = () => {
           </h3>
         </div>
       </div>
-      <div className="md:w-full flex justify-center ">
+      <Link to="/" >
+      <div className="md:w-full flex justify-center cursor-pointer ">
         <img className="h-auto md:w-full object-cover w-[90%]" src={Pizza} alt="pizza picture" />
       </div>
+      </Link>
     </div>
   );
 };
