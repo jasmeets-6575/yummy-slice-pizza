@@ -4,12 +4,14 @@ interface stateProps {
   isSidebarOpen: boolean;
   isRightSidebarOpen: boolean;
   isLoginSidebarOpen: boolean;
+  isDarkMode: boolean;
 }
 
 const initialState: stateProps = {
   isSidebarOpen: false,
   isRightSidebarOpen: false,
   isLoginSidebarOpen: false,
+  isDarkMode: false,
 };
 
 const toggleSidebarSlice = createSlice({
@@ -34,6 +36,9 @@ const toggleSidebarSlice = createSlice({
     closeLoginSidebar: (state) => {
       state.isLoginSidebarOpen = false;
     },
+    toggleDarkMode: (state) => {
+      state.isDarkMode = !state.isDarkMode
+    }
   },
 });
 
