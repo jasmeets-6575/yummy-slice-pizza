@@ -6,29 +6,43 @@ import { useAppSelector } from "../store/store";
 import Logo from "../components/Logo";
 
 const Login: React.FC = () => {
-  const { isLoginSidebarOpen } = useAppSelector((store) => store.toggle);
+  const { isLoginSidebarOpen, isDarkMode } = useAppSelector(
+    (store) => store.toggle
+  );
   return (
     <div
-      className={` duration-500 w-[30%] h-[90vh] shadow-xl bg-gray-100 fixed ${
-        isLoginSidebarOpen ? "right-0" : "right-[-30%]"
-      } z-10 `}
+      className={` duration-500 w-[30%] h-[90vh] shadow-xl ${
+        isDarkMode ? " bg-gray-700 text-white " : " bg-gray-100"
+      } fixed ${isLoginSidebarOpen ? "right-0" : "right-[-30%]"} z-10 `}
     >
       <div className="h-[90%] m-2 md:m-4 xl:m-8 xl:p-4 flex flex-col justify-around">
         <Logo color="text-blue-500" />
-        <p className="text-gray-800 text-center text-lg">
+        <p
+          className={`${
+            isDarkMode ? "text-white" : "text-gray-800"
+          } text-gray-800 text-center text-lg`}
+        >
           <span className="font-semibold tracking-wider">Login</span> to unlock
           awesome new features
         </p>
 
         {/* services */}
         <div className=" lg:flex justify-around">
-          <div className="flex items-center gap-2 ">
+          <div
+            className={` ${
+              isDarkMode ? "text-white" : "text-gray-800"
+            } flex items-center gap-2 `}
+          >
             <GiFullPizza className="text-[--primary-blue-2] text-xl lg:text-2xl" />
-            <p className=" text-md lg:text-lg text-gray-700">Great Food</p>
+            <p className=" text-md lg:text-lg">Great Food</p>
           </div>
-          <div className="flex items-center gap-2 ">
+          <div
+            className={` ${
+              isDarkMode ? "text-white" : "text-gray-800"
+            } flex items-center gap-2 `}
+          >
             <BsPersonHeart className="text-[--primary-blue-2] text-xl lg:text-2xl " />
-            <p className="text-md lg:text-lg text-gray-700">Great Service</p>
+            <p className="text-md lg:text-lg ">Great Service</p>
           </div>
         </div>
 
