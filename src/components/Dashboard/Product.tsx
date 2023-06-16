@@ -13,7 +13,7 @@ const Product: React.FC = () => {
       {pizzaData.map((item: dataType) => {
         const { name, price, description, image } = item;
         return (
-          <section className=" h-72  rounded-md shadow-md flex flex-col justify-between">
+          <section className=" h-72 bg-white rounded-md shadow-md flex flex-col justify-between">
             <div className=" relative">
               <img className="rounded-t-md " src={image} alt="pizza" />
               <div className=" flex justify-between items-center">

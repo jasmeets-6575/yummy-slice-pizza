@@ -7,7 +7,7 @@ const ItemLinks = () => {
     <div
       className={`${
         isDarkMode
-          ? " bg-gray-600 text-gray-100 "
+          ? " bg-gray-600 text-white "
           : " text-gray-600 bg-gray-100"
       } shadow-lg h-auto flex justify-center items-center`}
     >
