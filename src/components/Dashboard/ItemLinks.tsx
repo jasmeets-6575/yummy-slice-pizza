@@ -10,7 +10,7 @@ const ItemLinks = () => {
           return (
             <div
               key={id}
-              className=" text-gray-600 text-sm tracking-widest cursor-pointer hover:scale-110 hover:text-gray-800 "
+              className=" text-gray-600 text-sm tracking-widest cursor-pointer hover:scale-110 "
             >
               <span>{text}</span>
             </div>

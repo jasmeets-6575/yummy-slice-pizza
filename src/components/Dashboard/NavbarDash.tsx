@@ -26,9 +26,9 @@ const NavbarDash = () => {
           />
           <Logo />
         </div>
-        <div className="w-[30%] border-l border-white flex justify-center ">
+        <div className="w-[30%] border-l border-white flex justify-center items-center ">
           <div
-            className="w-[90%] lg:w-[50%] text-[1rem] py-2 flex justify-around mx-auto text-white "
+            className="w-[90%] lg:w-[50%] text-[1rem] py-1 flex justify-around mx-auto text-white "
             onClick={() => {
               dispatch(closeSidebar());
               dispatch(closeLoginSidebar());

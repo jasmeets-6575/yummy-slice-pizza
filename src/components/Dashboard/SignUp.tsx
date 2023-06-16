@@ -5,7 +5,7 @@ const SignUp = () => {
   const dispatch = useAppDispatch();
 
   return (
-    <div className=" flex justify-end items-center mx-2 border-secondary-500 cursor-pointer">
+    <div className="h-full flex justify-end items-center mx-2 cursor-pointer hover:bg-blue-700">
           <BiUserCircle className=" text-3xl md:text-4xl text-white" />
           <div
             className=" text-white ml-2 text-xs md:text-sm "
