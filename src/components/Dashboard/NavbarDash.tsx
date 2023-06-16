@@ -9,6 +9,7 @@ import {
   closeLoginSidebar,
 } from "../../features/toggleSidebar/toggleSidebar";
 import SignUp from "./SignUp";
+import { Link } from "react-router-dom";
 
 const NavbarDash = () => {
   const dispatch = useAppDispatch();
@@ -24,7 +25,10 @@ const NavbarDash = () => {
             }}
             className="text-2xl text-white cursor-pointer hover:scale-125"
           />
-          <Logo />
+
+          <Link to="/landing">
+            <Logo />
+          </Link>
         </div>
         <div className="w-[30%] border-l border-white flex justify-center items-center ">
           <div

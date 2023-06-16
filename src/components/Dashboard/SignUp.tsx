@@ -1,13 +1,11 @@
 import { BiUserCircle } from "react-icons/bi";
 import { toggleLoginSidebar } from "../../features/toggleSidebar/toggleSidebar";
 import { useAppDispatch } from "../../store/store";
-import DarkMode from "../DarkMode";
 const SignUp = () => {
   const dispatch = useAppDispatch();
 
   return (
     <div className="flex justify-center items-center">
-      <DarkMode />
       <div className="h-full flex justify-end items-center mx-2 cursor-pointer">
         <BiUserCircle className=" text-3xl md:text-4xl text-white" />
         <div

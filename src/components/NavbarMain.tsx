@@ -1,6 +1,7 @@
 import Logo from "./Logo";
 import SignUp from "./Dashboard/SignUp";
 import { Link } from "react-router-dom";
+import DarkMode from "./DarkMode";
 
 const NavbarMain: React.FC = () => {
   return (
@@ -9,7 +10,10 @@ const NavbarMain: React.FC = () => {
         <Link to="/">
           <Logo />
         </Link>
+        <div className="flex">
+        <DarkMode />
         <SignUp />
+        </div>
       </div>
     </div>
   );
