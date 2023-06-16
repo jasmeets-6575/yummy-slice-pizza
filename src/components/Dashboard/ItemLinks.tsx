@@ -4,12 +4,15 @@ import { navbarLinks } from "../../utils/navbarLinks";
 const ItemLinks = () => {
   return (
     <div className=" bg-gray-100 shadow-lg h-auto flex justify-center items-center">
-      <div className="w-[95vw] p-1 text-gray-600 text-sm tracking-widest flex justify-around items-center ">
+      <div className="w-[95vw] p-1 flex justify-around items-center ">
         {navbarLinks.map((link) => {
           const { id, path, text } = link;
           return (
-            <div key={id}>
-              <span> {text}</span>
+            <div
+              key={id}
+              className=" text-gray-600 text-sm tracking-widest cursor-pointer hover:scale-110 hover:text-gray-800 "
+            >
+              <span>{text}</span>
             </div>
           );
         })}

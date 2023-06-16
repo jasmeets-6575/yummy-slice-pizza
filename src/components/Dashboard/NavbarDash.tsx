@@ -15,14 +15,14 @@ const NavbarDash = () => {
   return (
     <div className="h-auto py-3 w-full flex bg-[--primary-blue]">
       <div className="w-[95vw] mx-auto flex justify-between ">
-        <div className="flex justify-around items-center gap-7">
+        <div className="flex justify-around  items-center gap-5">
           <FaBars
             onClick={() => {
               dispatch(closeRightSidebar());
               dispatch(closeLoginSidebar());
               dispatch(toggleSidebar());
             }}
-            className="text-2xl text-white cursor-pointer hover:text-3xl"
+            className="text-2xl text-white cursor-pointer hover:scale-125"
           />
           <Logo />
         </div>
