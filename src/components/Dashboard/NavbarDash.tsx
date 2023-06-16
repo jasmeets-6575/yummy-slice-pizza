@@ -1,15 +1,14 @@
-import { BiUserCircle } from "react-icons/bi";
 import { FaBars } from "react-icons/fa";
 import Logo from "../Logo";
 import { useAppDispatch } from "../../store/store";
 import {
   toggleSidebar,
   toggleRightSidebar,
-  toggleLoginSidebar,
   closeSidebar,
   closeRightSidebar,
   closeLoginSidebar,
 } from "../../features/toggleSidebar/toggleSidebar";
+import SignUp from "./SignUp";
 
 const NavbarDash = () => {
   const dispatch = useAppDispatch();
@@ -43,21 +42,7 @@ const NavbarDash = () => {
               <h2 className="mx-1 cursor-pointer">Dine-In</h2>
             </div>
           </div>
-
-          <div className=" flex justify-end items-center mx-2 border-secondary-500 cursor-pointer">
-            <BiUserCircle className=" text-3xl md:text-4xl text-white" />
-            <div
-              className=" text-white ml-2 text-xs md:text-sm "
-              onClick={() => {
-                dispatch(closeRightSidebar());
-                dispatch(closeSidebar());
-                dispatch(toggleLoginSidebar());
-              }}
-            >
-              <h3>MY ACCOUNT</h3>
-              <h3>Log In / Sign Up</h3>
-            </div>
-          </div>
+          <SignUp />
         </div>
       </div>
     </div>

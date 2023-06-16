@@ -1,5 +1,4 @@
 import { BiUserCircle } from "react-icons/bi";
-import Logo from "../Logo";
 import { toggleLoginSidebar } from "../../features/toggleSidebar/toggleSidebar";
 import { useAppDispatch } from "../../store/store";
 const SignUp = () => {
