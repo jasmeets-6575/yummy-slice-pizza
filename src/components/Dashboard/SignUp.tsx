@@ -1,5 +1,9 @@
 import { BiUserCircle } from "react-icons/bi";
-import { toggleLoginSidebar } from "../../features/toggleSidebar/toggleSidebar";
+import {
+  toggleLoginSidebar,
+  closeSidebar,
+  closeRightSidebar,
+} from "../../features/toggleSidebar/toggleSidebar";
 import { useAppDispatch } from "../../store/store";
 const SignUp = () => {
   const dispatch = useAppDispatch();
@@ -10,7 +14,11 @@ const SignUp = () => {
         <BiUserCircle className=" text-3xl md:text-4xl text-white" />
         <div
           className=" text-white ml-2 text-xs md:text-sm "
-          onClick={() => dispatch(toggleLoginSidebar())}
+          onClick={() => {
+            dispatch(toggleLoginSidebar());
+            dispatch(closeSidebar());
+            dispatch(closeRightSidebar());
+          }}
         >
           <h3>MY ACCOUNT</h3>
           <h3>Log In / Sign Up</h3>
