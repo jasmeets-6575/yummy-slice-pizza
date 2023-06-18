@@ -8,12 +8,9 @@ interface dataType {
   image: string;
 }
 
-const Product: React.FC = () => {
+const Product: React.FC<dataType> = ({name, price, description, image}) => {
   return (
-    <div className=" grid grid-cols-3 gap-10 p-7 ">
-      {pizzaData.map((item: dataType) => {
-        const { name, price, description, image } = item;
-        return (
+    <div className="p-5">
           <section className=" h-72 bg-white rounded-md shadow-md flex flex-col justify-between">
             <div className=" relative">
               <img className="rounded-t-md " src={image} alt="pizza" />
@@ -40,8 +37,6 @@ const Product: React.FC = () => {
               </button>
             </div>
           </section>
-        );
-      })}
     </div>
   );
 };
